@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double KDVTutar, KDVliTutar, tutar, KDVOran;
+        boolean KDVDurumu;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Ücret tutarı:");
+        tutar = inp.nextDouble();
+
+        KDVDurumu = (0<tutar) && (tutar<1000);
+        KDVOran=KDVDurumu ? 0.18: 0.08;
+
+        KDVTutar = tutar * KDVOran;
+        KDVliTutar = tutar + KDVTutar;
+        System.out.println(KDVTutar);
+        System.out.println(KDVliTutar);
+
+
+
+    }
+}
